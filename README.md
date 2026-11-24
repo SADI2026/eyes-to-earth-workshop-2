@@ -1,69 +1,64 @@
-# EYES TO EARTH — Workshop de Estudantes 2
+# EYES TO EARTH (ETE)
+## 2.º Workshop de Estudantes — Observação da Terra e Inteligência Artificial ao Serviço da Monitorização da Água
 
-Website institucional do segundo Workshop de Estudantes do projecto EYES TO EARTH.
+**Data:** 21 de Novembro de 2026  
+**Local:** Universidade Eduardo Mondlane (UEM), Faculdade de Ciências, Departamento de Física, Laboratório de Astronomia — Maputo, Moçambique.  
+**Participantes:** 12
 
-## Organização dos ficheiros
+### Sobre o Workshop
 
-```text
-eyes-to-earth-workshop-2/
-├── index.html
-├── styles.css
-├── script.js
-├── README.md
-├── assets/
-│   └── imagens/
-│       ├── capa/          # imagem principal do site
-│       ├── galeria/       # fotografias do workshop
-│       └── temas/         # imagens de satélite, água, IA e cheias
-└── documentos/
-    └── apresentacoes/     # PDFs dos quatro apresentadores
-```
+No dia 21 de Novembro de 2026, o projecto EYES TO EARTH (ETE) realizou o seu segundo Workshop de Estudantes, reunindo 12 participantes provenientes de diferentes níveis académicos e áreas de formação.
 
-## Como organizar as imagens
+O encontro proporcionou um espaço de partilha de conhecimentos e intercâmbio científico sobre a utilização de dados de satélite e Inteligência Artificial (IA) na monitorização dos recursos hídricos e na previsão de cheias.
 
-Use nomes curtos, sem espaços nem acentos:
-- `assets/imagens/capa/incomati-marracuene.jpg`
-- `assets/imagens/galeria/foto-grupo.jpg`
-- `assets/imagens/galeria/sessao-apresentacoes.jpg`
-- `assets/imagens/galeria/aula-pratica.jpg`
-- `assets/imagens/temas/observacao-terra.jpg`
+Durante o workshop, foram exploradas aplicações práticas das tecnologias de Observação da Terra, incluindo uma demonstração da plataforma ETE.
 
-**Imagem principal recomendada:** uma fotografia aérea ou imagem de satélite real do rio Incomáti e da paisagem de Marracuene/Macaneta. Deve mostrar o rio e a planície envolvente, ser nítida e ter autorização/licença de utilização. Se for imagem de satélite, indicar a fonte e a data (por exemplo, Sentinel-2 / Copernicus, quando aplicável). Não usar uma imagem genérica de outro rio como se fosse Marracuene.
+### Principais Destaques
 
-## Como organizar documentos
+- Partilha de conhecimentos sobre dados de satélite e Observação da Terra.
+- Aplicações da Inteligência Artificial na monitorização dos recursos hídricos.
+- Previsão de cheias e monitorização ambiental.
+- Realização de actividades práticas.
+- Demonstração da plataforma ETE.
+- Intercâmbio científico entre os participantes.
 
-Guardar os PDFs em `documentos/apresentacoes/`, com nomes consistentes:
-- `apresentacao-01.pdf`
-- `apresentacao-02.pdf`
-- `apresentacao-03.pdf`
-- `apresentacao-04.pdf`
+### Plataforma EYES TO EARTH
 
-Depois, cada cartão em `index.html` deve apontar para o PDF correspondente, com um link para abrir e outro para descarregar. Confirmar autorização dos autores antes de publicar os slides.
+Explore a plataforma do projecto:
 
-## Conteúdos e fontes
+[**Aceder à Plataforma ETE**](https://ete-platform.streamlit.app)
 
-O site inclui secções temáticas sobre Observação da Terra, monitorização da água, Inteligência Artificial e previsão de cheias, além de uma introdução geográfica e histórica a Marracuene e ao rio Incomáti.
+### Materiais do Workshop
 
-Fontes de referência para rever/expandir o texto:
-- Município de Marracuene: https://www.cmmarracuene.gov.mz/sobre-o-municipio/
-- Instituto Nacional de Estatística, Estatísticas do Distrito de Marracuene (2019–2023): https://ine.gov.mz/documents/20119/271103/Marracuene_Junho2024.pdf
-- Portal do Governo de Moçambique, Perfil do Distrito de Marracuene: https://www.portaldogoverno.gov.mz/por/content/download/2966/23882/version/1/file/Marracuene.pdf
+Este repositório reúne os materiais do segundo Workshop de Estudantes, incluindo apresentações, fotografias, actividades práticas e outros conteúdos de apoio.
 
-A secção histórica é introdutória. Recomenda-se validação adicional com fontes históricas e/ou especialistas locais antes de publicar um texto histórico mais aprofundado.
+### Temas Abordados
 
-## Link do painel de controlo ETE
+- Observação da Terra e dados de satélite.
+- Monitorização dos recursos hídricos.
+- Inteligência Artificial aplicada ao ambiente.
+- Previsão de cheias.
+- Contextualização geográfica e histórica de Marracuene e do rio Incomáti.
 
-https://ete-platform.streamlit.app/
+### Mensagem do Projecto
 
-O botão “Abrir painel de controlo ETE” já está ligado a este endereço.
+*A ciência aproxima-nos, inspira-nos e abre caminhos para transformar realidades.*
 
-## Publicar no GitHub Pages
+### Organização do Repositório
 
-1. Envie o conteúdo deste pacote para a raiz do repositório `SADI2026/eyes-to-earth-workshop-2`.
-2. Abra **Settings → Pages**.
-3. Em **Build and deployment**, escolha **Deploy from a branch**.
-4. Selecione a branch **main** e a pasta **/(root)**.
-5. Clique em **Save** e aguarde a publicação.
+- `assets/imagens/capa/` — Imagem principal do website.
+- `assets/imagens/galeria/` — Fotografias do workshop.
+- `assets/imagens/temas/` — Imagens relacionadas com os temas abordados.
+- `documentos/apresentacoes/` — Apresentações dos participantes em formato PDF.
+- `index.html` — Página principal do website.
+- `styles.css` — Estilos e identidade visual do website.
+- `script.js` — Funcionalidades e interacções do website.
+
+### Agradecimentos
+
+Agradecemos a todos os participantes, colaboradores e envolvidos que contribuíram para a realização do segundo Workshop de Estudantes do projecto EYES TO EARTH.
+
+**EYES TO EARTH — Observar a Terra, compreender a água e apoiar decisões informadas.**
 
 Endereço esperado: https://sadi2026.github.io/eyes-to-earth-workshop-2/
 
