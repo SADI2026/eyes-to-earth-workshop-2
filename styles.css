@@ -1,22 +1,35 @@
 
-/* =========================================
-   EYES TO EARTH — STUDENT WORKSHOP 2
-   FOLHA DE ESTILOS PRINCIPAL
-========================================= */
+/* ==================================================
+   EYES TO EARTH — EDITORIAL DESIGN
+   Student Workshop 2
+   Sophisticated Scientific & Institutional Identity
+================================================== */
 
-/* 1. CONFIGURAÇÕES GERAIS */
+/* 01 — DESIGN SYSTEM */
 
 :root {
-    --primary: #073b4c;
-    --secondary: #087e8b;
-    --accent: #20a4a8;
-    --light: #f3f8fa;
-    --white: #ffffff;
-    --dark: #18343b;
-    --text: #465b63;
-    --border: #dce8eb;
-    --shadow: 0 8px 28px rgba(7, 59, 76, 0.08);
+    --forest: #102e35;
+    --forest-light: #1b4145;
+    --teal: #285b58;
+    --sage: #b8cfc2;
+    --gold: #b18a54;
+    --ivory: #f5f2eb;
+    --paper: #fffefa;
+    --sand: #e8e1d4;
+    --ink: #263a3a;
+    --muted: #75817b;
+    --line: #deddd3;
+
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Source Sans 3', sans-serif;
+    --font-ui: 'Montserrat', sans-serif;
+
+    --content-width: 1160px;
+    --section-space: 112px;
 }
+
+
+/* 02 — RESET E BASE */
 
 * {
     margin: 0;
@@ -26,21 +39,22 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-padding-top: 100px;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: var(--white);
-    color: var(--text);
-    line-height: 1.75;
-    font-size: 15px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
     overflow-x: hidden;
 }
 
 img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
 }
 
 a {
@@ -48,208 +62,285 @@ a {
     text-decoration: none;
 }
 
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .container {
-    width: min(1160px, 90%);
-    margin: 0 auto;
+    width: min(var(--content-width), 88%);
+    margin-inline: auto;
+}
+
+::selection {
+    background: var(--sage);
+    color: var(--forest);
 }
 
 
-/* 2. CABEÇALHO */
+/* 03 — CABEÇALHO */
 
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 2px 12px rgba(7, 59, 76, 0.04);
+    background: rgba(255, 254, 250, 0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
 }
 
 .header-content {
-    min-height: 82px;
+    min-height: 92px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
+    gap: 32px;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     flex-shrink: 0;
 }
 
 .site-logo {
-    width: 55px;
-    height: 55px;
+    width: 58px;
+    height: 58px;
     object-fit: contain;
 }
 
 .brand-name {
-    font-size: 17px;
+    font-family: var(--font-ui);
+    font-size: 13px;
     font-weight: 800;
-    letter-spacing: 1px;
-    color: var(--primary);
+    letter-spacing: 2.2px;
+    color: var(--forest);
 }
 
 .main-nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 25px;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .main-nav a {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--primary);
+    position: relative;
+    font-family: var(--font-ui);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: var(--forest);
+    padding: 9px 0;
     transition: color 0.3s ease;
 }
 
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
 .main-nav a:hover {
-    color: var(--accent);
+    color: var(--gold);
+}
+
+.main-nav a:hover::after {
+    width: 100%;
 }
 
 
-/* 3. SECÇÃO PRINCIPAL */
+/* 04 — CAPA EDITORIAL */
 
 .hero {
-    min-height: 570px;
+    min-height: 690px;
     display: flex;
     align-items: center;
     position: relative;
+    isolation: isolate;
     overflow: hidden;
+
+    padding: 110px 0;
+
+    color: var(--paper);
+
     background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(184, 207, 194, 0.13),
+            transparent 34%
+        ),
         linear-gradient(
-            120deg,
-            rgba(4, 43, 58, 0.97),
-            rgba(7, 89, 103, 0.91)
+            115deg,
+            #102e35 0%,
+            #173d40 58%,
+            #285b58 100%
         );
-    color: var(--white);
-    padding: 90px 0;
 }
 
-.hero::after {
-    content: "";
+.hero::before {
+    content: "EYES TO EARTH";
     position: absolute;
-    width: 430px;
-    height: 430px;
-    right: -100px;
-    bottom: -180px;
-    border: 1px solid rgba(255, 255, 255, 0.13);
-    border-radius: 50%;
-    box-shadow:
-        0 0 0 45px rgba(255, 255, 255, 0.025),
-        0 0 0 90px rgba(255, 255, 255, 0.02);
-    pointer-events: none;
+    z-index: -1;
+    right: -35px;
+    bottom: -75px;
+
+    font-family: var(--font-display);
+    font-size: clamp(100px, 18vw, 260px);
+    font-weight: 600;
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.035);
+    white-space: nowrap;
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 1000px;
-}
-
-.eyebrow {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 15px;
+    max-width: 950px;
 }
 
 .hero .eyebrow {
-    color: #9ce7e3;
+    color: var(--sage);
+}
+
+.eyebrow {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 22px;
 }
 
 .hero h1 {
-    max-width: 900px;
-    font-size: clamp(30px, 5vw, 52px);
-    line-height: 1.2;
-    font-weight: 800;
+    max-width: 920px;
+
+    font-family: var(--font-display);
+    font-size: clamp(46px, 6.5vw, 83px);
+    font-weight: 600;
+    line-height: 0.99;
     letter-spacing: -1.5px;
-    margin-bottom: 25px;
+
+    color: var(--paper);
+    margin-bottom: 32px;
 }
 
 .hero-description {
-    max-width: 760px;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: 16px;
-    margin-bottom: 28px;
+    max-width: 680px;
+    font-size: 17px;
+    line-height: 1.9;
+    color: rgba(255, 254, 250, 0.82);
+    margin-bottom: 35px;
 }
 
 .event-details {
-    margin-bottom: 30px;
+    border-left: 1px solid var(--gold);
+    padding-left: 22px;
+    margin-bottom: 35px;
 }
 
 .event-details p {
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 7px;
     font-size: 13px;
+    line-height: 1.9;
+    color: rgba(255, 254, 250, 0.85);
+    margin-bottom: 5px;
 }
 
 .event-details strong {
-    color: #ffffff;
+    color: var(--sage);
+    font-weight: 700;
 }
 
 .btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 13px 24px;
-    background: var(--accent);
-    color: var(--white);
-    font-size: 12px;
-    font-weight: 800;
-    border-radius: 5px;
+
+    padding: 15px 25px;
+
+    background: var(--gold);
+    color: #ffffff;
+
+    font-family: var(--font-ui);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background: var(--white);
-    color: var(--primary);
-    transform: translateY(-2px);
+    background: transparent;
+    color: var(--paper);
+    transform: translateY(-3px);
 }
 
 
-/* 4. SECÇÕES GERAIS */
+/* 05 — ESTRUTURA DAS SECÇÕES */
 
 .section {
-    padding: 90px 0;
+    padding: var(--section-space) 0;
 }
 
 .section-light {
-    background: var(--light);
+    background: var(--ivory);
 }
 
 .section-heading {
-    max-width: 760px;
-    margin: 0 auto 45px;
+    max-width: 800px;
+    margin: 0 auto 58px;
     text-align: center;
 }
 
-.section-heading h2 {
-    font-size: clamp(26px, 4vw, 36px);
-    line-height: 1.25;
-    font-weight: 800;
-    color: var(--primary);
+.section-heading .eyebrow {
     margin-bottom: 15px;
 }
 
+.section-heading h2 {
+    font-family: var(--font-display);
+    font-size: clamp(39px, 5vw, 57px);
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--forest);
+    margin-bottom: 21px;
+}
+
+.section-heading h2::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 23px auto 0;
+}
+
 .section-heading > p:not(.eyebrow) {
-    font-size: 14px;
-    color: var(--text);
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
 }
 
 
-/* 5. SOBRE O WORKSHOP */
+/* 06 — SOBRE */
 
 .about-content {
-    max-width: 900px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
@@ -257,104 +348,136 @@ a {
 .context-content p,
 .platform-content p,
 .location-content p {
-    font-size: 14px;
-    line-height: 1.9;
-    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 2;
+    color: var(--text);
+    margin-bottom: 24px;
 }
 
 .about-content strong {
-    color: var(--primary);
+    color: var(--teal);
+    font-weight: 700;
 }
 
 
-/* 6. LOCALIZAÇÃO */
+/* 07 — LOCALIZAÇÃO */
 
 .location-content {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
-    padding: 35px;
-    background: var(--white);
-    border-left: 4px solid var(--accent);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
+
+    padding: 45px 50px;
+
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold);
+
+    box-shadow: 0 12px 35px rgba(16, 46, 53, 0.045);
 }
 
 .location-content h3 {
-    color: var(--primary);
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 18px;
 }
 
 .location-content p {
+    font-size: 14px;
     margin-bottom: 8px;
 }
 
 
-/* 7. TEMAS */
+/* 08 — TEMAS */
 
 .themes-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
+    gap: 1px;
+
+    background: var(--line);
+    border: 1px solid var(--line);
 }
 
 .theme-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 9px;
-    padding: 28px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    min-height: 235px;
+
+    padding: 35px 30px;
+
+    background: var(--paper);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.theme-card::before {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 24px;
 }
 
 .theme-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 35px rgba(7, 59, 76, 0.12);
+    background: #f2f5ef;
 }
 
 .theme-card h3 {
-    color: var(--primary);
-    font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 13px;
+    font-family: var(--font-display);
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--forest);
+    margin-bottom: 15px;
 }
 
 .theme-card p {
+    color: var(--muted);
     font-size: 13px;
-    line-height: 1.8;
+    line-height: 1.85;
 }
 
 
-/* 8. CONTEXTO: MARRACUENE E INCOMÁTI */
+/* 09 — CONTEXTO GEOGRÁFICO */
 
 .context-content {
-    max-width: 900px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
 .context-content p {
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 }
 
 
-/* 9. PLATAFORMA */
+/* 10 — PLATAFORMA */
 
 .platform-section {
     background:
-        linear-gradient(
-            120deg,
-            var(--primary),
-            #096b77
-        );
-    color: var(--white);
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(184, 207, 194, 0.12),
+            transparent 30%
+        ),
+        var(--forest);
+
+    color: var(--paper);
 }
 
 .platform-section .section-heading h2 {
-    color: var(--white);
+    color: var(--paper);
+}
+
+.platform-section .section-heading > p:not(.eyebrow) {
+    color: rgba(255, 254, 250, 0.7);
 }
 
 .platform-section .section-heading .eyebrow {
-    color: #9ce7e3;
+    color: var(--sage);
 }
 
 .platform-content {
@@ -364,264 +487,317 @@ a {
 }
 
 .platform-content p {
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 28px;
+    color: rgba(255, 254, 250, 0.82);
+    margin-bottom: 32px;
 }
 
 .platform-content .btn-primary {
-    background: var(--white);
-    color: var(--primary);
+    background: var(--gold);
+    color: #ffffff;
 }
 
 .platform-content .btn-primary:hover {
-    background: var(--accent);
-    color: var(--white);
+    background: transparent;
+    color: var(--paper);
 }
 
 
-/* 10. GALERIA */
+/* 11 — GALERIA */
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    gap: 17px;
 }
 
 .gallery-item {
-    height: 250px;
+    position: relative;
+    height: 280px;
     overflow: hidden;
-    border-radius: 8px;
-    background: #e4edef;
-    box-shadow: var(--shadow);
+    background: var(--sand);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+
+    transition:
+        transform 0.65s ease,
+        filter 0.65s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.06);
+    transform: scale(1.045);
+    filter: brightness(0.91);
 }
 
 
-/* 11. MATERIAIS E APRESENTAÇÕES */
+/* 12 — DOCUMENTOS */
 
 .documents-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    gap: 20px;
 }
 
 .document-card {
+    min-height: 225px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 28px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 9px;
-    box-shadow: var(--shadow);
+
+    padding: 34px;
+
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 2px solid var(--gold);
+
+    transition: box-shadow 0.3s ease;
+}
+
+.document-card:hover {
+    box-shadow: 0 12px 30px rgba(16, 46, 53, 0.08);
 }
 
 .document-card h3 {
-    color: var(--primary);
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 12px;
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--forest);
+    margin-bottom: 14px;
 }
 
 .document-card p {
-    font-size: 13px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 24px;
 }
 
 .document-card a {
-    display: inline-block;
     margin-top: auto;
-    padding: 10px 18px;
-    border-radius: 4px;
-    background: var(--primary);
-    color: var(--white);
-    font-size: 11px;
-    font-weight: 800;
-    transition: background 0.3s ease;
+
+    font-family: var(--font-ui);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: var(--teal);
+
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--gold);
+
+    transition: color 0.3s ease;
 }
 
 .document-card a:hover {
-    background: var(--accent);
+    color: var(--gold);
 }
 
 
-/* 12. AGRADECIMENTOS */
+/* 13 — AGRADECIMENTOS */
 
 .acknowledgements-content {
-    max-width: 920px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 45px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
+
+    padding: 62px 68px;
+
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold);
+
+    box-shadow: 0 15px 45px rgba(16, 46, 53, 0.055);
 }
 
 .acknowledgements-content p {
-    font-size: 13px;
-    line-height: 2;
-    color: var(--text);
-    margin-bottom: 22px;
-    text-align: justify;
+    color: #56635e;
+    font-size: 15px;
+    line-height: 2.05;
+    text-align: left;
+    margin-bottom: 27px;
 }
 
 .acknowledgements-content strong {
-    color: var(--primary);
-    font-weight: 800;
+    color: var(--forest);
+    font-weight: 700;
 }
 
 .acknowledgements-content .acknowledgements-highlight {
-    margin-top: 30px;
-    padding: 22px;
-    background: #eaf6f6;
-    border-left: 4px solid var(--accent);
-    color: var(--primary);
-    font-size: 15px;
-    font-weight: 700;
-    text-align: left;
+    margin: 42px 0 30px;
+    padding: 28px 32px;
+
+    background: var(--forest);
+    border-left: 3px solid var(--gold);
+
+    color: var(--paper);
+
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.45;
 }
 
 .acknowledgements-content .acknowledgements-final {
-    margin-bottom: 0;
-    color: var(--secondary);
-    font-size: 16px;
-    font-weight: 800;
+    margin: 0;
+
     text-align: center;
+
+    color: var(--teal);
+
+    font-family: var(--font-display);
+    font-size: 29px;
+    font-weight: 600;
 }
 
 
-/* 13. MENSAGEM FINAL */
+/* 14 — ENCERRAMENTO */
 
 .closing-section {
-    padding: 75px 0;
-    background: var(--primary);
+    padding: 95px 0;
     text-align: center;
-    color: var(--white);
+
+    background: var(--forest);
+    color: var(--paper);
 }
 
 .closing-quote {
-    max-width: 850px;
-    margin: 0 auto 18px;
-    font-size: clamp(20px, 3vw, 28px);
-    line-height: 1.5;
-    font-weight: 700;
+    max-width: 880px;
+    margin: 0 auto 24px;
+
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4.5vw, 51px);
+    font-weight: 600;
+    line-height: 1.25;
 }
 
 .closing-brand {
-    font-size: 11px;
+    color: var(--sage);
+
+    font-family: var(--font-ui);
+    font-size: 10px;
     font-weight: 700;
-    letter-spacing: 2px;
-    color: #9ce7e3;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
 
-/* 14. RODAPÉ */
+/* 15 — RODAPÉ INSTITUCIONAL */
 
 .site-footer {
-    padding: 65px 0 20px;
-    background: #052e3b;
-    color: rgba(255, 255, 255, 0.8);
+    padding: 78px 0 25px;
+
+    background: #0b252b;
+    color: rgba(255, 254, 250, 0.72);
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 35px;
-    padding-bottom: 45px;
+    gap: 42px;
+
+    padding-bottom: 55px;
 }
 
 .footer-column h3 {
-    color: var(--white);
-    font-size: 14px;
-    margin-bottom: 22px;
-    font-weight: 800;
+    font-family: var(--font-ui);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: var(--sage);
+
+    margin-bottom: 27px;
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-column p {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.9;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
     overflow-wrap: anywhere;
 }
 
 .footer-column strong {
-    color: var(--white);
+    color: var(--paper);
 }
 
 .footer-column a {
-    color: #9ce7e3;
+    color: #d0c09f;
+    transition: color 0.3s ease;
     overflow-wrap: anywhere;
 }
 
 .footer-column a:hover {
-    color: var(--white);
-    text-decoration: underline;
+    color: var(--paper);
 }
 
 .footer-logo {
-    width: 85px;
-    height: 85px;
+    width: 82px;
+    height: 82px;
     object-fit: contain;
-    background: var(--white);
-    padding: 5px;
-    border-radius: 6px;
-    margin-bottom: 15px;
+
+    background: var(--paper);
+    padding: 6px;
+
+    margin-bottom: 20px;
 }
 
 .funders-logos {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 13px;
     margin-bottom: 20px;
 }
 
 .funder-logo {
-    width: 75px;
-    height: 75px;
+    width: 76px;
+    height: 76px;
     object-fit: contain;
-    background: var(--white);
+
     padding: 6px;
-    border-radius: 5px;
+    background: var(--paper);
 }
 
 .footer-bottom {
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    padding-top: 23px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     text-align: center;
 }
 
 .footer-bottom p {
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 254, 250, 0.5);
+    font-family: var(--font-ui);
+    font-size: 9px;
+    letter-spacing: 0.5px;
 }
 
 
-/* 15. TABLETS */
+/* 16 — TABLETS */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+
+    :root {
+        --section-space: 85px;
+    }
 
     .header-content {
         flex-direction: column;
         justify-content: center;
         padding: 15px 0;
-        gap: 14px;
+        gap: 12px;
     }
 
     .main-nav {
         justify-content: center;
-        gap: 12px 18px;
+        gap: 10px 19px;
     }
 
     .themes-grid {
@@ -636,23 +812,27 @@ a {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .hero {
+        min-height: 590px;
+    }
 }
 
 
-/* 16. TELEMÓVEIS */
+/* 17 — TELEMÓVEIS */
 
 @media (max-width: 600px) {
 
-    body {
-        font-size: 14px;
+    :root {
+        --section-space: 67px;
     }
 
     .container {
-        width: 90%;
+        width: 89%;
     }
 
     .header-content {
-        padding: 12px 0;
+        min-height: auto;
+        padding: 14px 0;
     }
 
     .site-logo {
@@ -661,41 +841,50 @@ a {
     }
 
     .brand-name {
-        font-size: 15px;
+        font-size: 11px;
     }
 
     .main-nav {
-        gap: 9px 13px;
+        gap: 7px 13px;
     }
 
     .main-nav a {
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .hero {
-        min-height: auto;
-        padding: 75px 0;
+        min-height: 570px;
+        padding: 80px 0;
     }
 
     .hero h1 {
-        font-size: 30px;
-        letter-spacing: -0.5px;
+        font-size: clamp(43px, 12vw, 60px);
     }
 
     .hero-description {
         font-size: 14px;
     }
 
-    .section {
-        padding: 65px 0;
-    }
-
     .section-heading {
-        margin-bottom: 30px;
+        margin-bottom: 38px;
     }
 
     .section-heading h2 {
-        font-size: 27px;
+        font-size: 40px;
+    }
+
+    .about-content p,
+    .context-content p,
+    .platform-content p {
+        font-size: 14px;
+    }
+
+    .location-content {
+        padding: 30px 25px;
+    }
+
+    .location-content h3 {
+        font-size: 29px;
     }
 
     .themes-grid,
@@ -705,39 +894,61 @@ a {
         grid-template-columns: 1fr;
     }
 
+    .theme-card {
+        min-height: auto;
+        padding: 30px 25px;
+    }
+
     .gallery-item {
         height: 260px;
     }
 
-    .location-content {
-        padding: 25px;
-    }
-
-    .theme-card,
     .document-card {
-        padding: 23px;
+        min-height: 205px;
+        padding: 28px;
     }
 
     .acknowledgements-content {
-        padding: 25px 20px;
+        padding: 35px 25px;
     }
 
     .acknowledgements-content p {
-        font-size: 12px;
-        line-height: 1.9;
-        text-align: left;
+        font-size: 14px;
+        line-height: 1.95;
+    }
+
+    .acknowledgements-content .acknowledgements-highlight {
+        padding: 23px;
+        font-size: 23px;
+    }
+
+    .acknowledgements-content .acknowledgements-final {
+        font-size: 26px;
     }
 
     .closing-section {
-        padding: 60px 0;
+        padding: 75px 0;
     }
 
-    .site-footer {
-        padding-top: 50px;
+    .closing-quote {
+        font-size: 34px;
     }
 
     .footer-grid {
-        gap: 30px;
+        gap: 35px;
     }
+}
 
+
+/* 18 — ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
