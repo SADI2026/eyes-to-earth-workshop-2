@@ -1,184 +1,254 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Segundo Workshop de Estudantes EYES TO EARTH: observação da Terra e inteligência artificial ao serviço da monitorização da água.">
-  <meta name="theme-color" content="#102f2a">
-  <title>Workshop de Estudantes 2 | EYES TO EARTH</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EYES TO EARTH - 2.º Workshop de Estudantes: Observação da Terra e Inteligência Artificial ao serviço da monitorização da água.">
+  <title>EYES TO EARTH | 2.º Workshop</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="EYES TO EARTH — início">
-      <span class="brand-mark">ETE</span>
-      <span><strong>EYES TO EARTH</strong><small>Ciência · Tecnologia · Ambiente</small></span>
+
+<header class="site-header">
+  <a href="#inicio" class="logo">EYES <span>TO EARTH</span></a>
+  <nav>
+    <a href="#sobre">Workshop</a>
+    <a href="#temas">Temas</a>
+    <a href="#marracuene">Marracuene</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#apresentacoes">Apresentações</a>
+  </nav>
+  <a class="header-button" href="https://ete-platform.streamlit.app" target="_blank" rel="noopener">Abrir plataforma</a>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <p class="eyebrow">EYES TO EARTH · MOÇAMBIQUE</p>
+    <h1>Observação da Terra e Inteligência Artificial ao serviço da monitorização da água</h1>
+    <p>2.º Workshop de Estudantes</p>
+    <p>21 de Novembro de 2026 · Universidade Eduardo Mondlane</p>
+    <a class="main-button" href="#sobre">Conhecer o workshop</a>
+  </div>
+  <div class="hero-image">
+    <img src="assets/imagens/capa/01-capa-satelite-incomati.png"
+         alt="Imagem ilustrativa de satélite do rio Incomáti">
+    <small>Imagem ilustrativa do contexto geográfico do rio Incomáti.</small>
+  </div>
+</section>
+
+<section class="section" id="sobre">
+  <p class="eyebrow">O EVENTO</p>
+  <h2>Sobre o 2.º Workshop</h2>
+  <p>
+    No dia 21 de Novembro de 2026, o projecto EYES TO EARTH realizou
+    o seu segundo Workshop de Estudantes, reunindo 12 participantes
+    provenientes de diferentes níveis académicos e áreas de formação.
+  </p>
+  <p>
+    O encontro promoveu a partilha de conhecimentos sobre a utilização
+    de dados de satélite e Inteligência Artificial na monitorização
+    dos recursos hídricos e na previsão de cheias.
+  </p>
+  <p>
+    O programa incluiu apresentações, actividades práticas,
+    intercâmbio científico e uma demonstração da plataforma ETE.
+  </p>
+
+  <div class="event-location">
+    <strong>Local de realização</strong>
+    <p>Universidade Eduardo Mondlane (UEM), Faculdade de Ciências,
+    Departamento de Física, Laboratório de Astronomia, Maputo, Moçambique.</p>
+  </div>
+</section>
+
+<section class="section themes-section" id="temas">
+  <p class="eyebrow">CONHECIMENTO CIENTÍFICO</p>
+  <h2>Temas do Workshop</h2>
+  <p>Explore os principais temas abordados no encontro.</p>
+
+  <div class="theme-grid">
+    <a class="theme-card" href="#observacao">
+      <h3>01 · Observação da Terra</h3>
+      <p>Dados de satélite e análise da superfície terrestre.</p>
+      <span>Explorar tema →</span>
     </a>
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-    <nav class="nav">
-      <a href="#sobre">O workshop</a>
-      <a href="#programa">Conteúdos</a>
-      <a href="#apresentacoes">Apresentações</a>
-      <a href="#galeria">Galeria</a>
-      <a class="nav-cta" href="https://ete-platform.streamlit.app/" target="_blank" rel="noopener">Painel ETE ↗</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
-      <div class="hero-grid"></div>
-      <div class="hero-content">
-        <p class="eyebrow"><span></span> WORKSHOP DE ESTUDANTES · 02</p>
-        <h1>Observação da Terra e <em>Inteligência Artificial</em> ao serviço da monitorização da água.</h1>
-        <p class="hero-lead">Tecnologia e conhecimento científico para compreender os recursos hídricos e apoiar a previsão de cheias em Moçambique.</p>
-        <div class="hero-meta">
-          <span>◷ 21 de Novembro de 2026</span>
-          <span>◎ 12 participantes</span>
-          <span>⌁ Moçambique</span>
-        </div>
-        <div class="hero-actions">
-          <a class="button button-light" href="#sobre">Conhecer o workshop <span>↓</span></a>
-          <a class="button button-outline" href="https://ete-platform.streamlit.app/" target="_blank" rel="noopener">Explorar a plataforma ↗</a>
-        </div>
-      </div>
-      <div class="hero-visual" aria-label="Ilustração abstrata de observação da Terra">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
-        <div class="earth">
-          <div class="earth-shine"></div><div class="land land-a"></div><div class="land land-b"></div>
-          <div class="water-line"></div>
-        </div>
-        <div class="satellite"><span></span><i></i></div>
-        <div class="visual-label"><b>EARTH OBSERVATION</b><small>Dados · Água · IA</small></div>
-      </div>
-      <div class="hero-bottom"><span> EYES TO EARTH </span><span>WORKSHOP 02 / 2026</span></div>
-    </section>
+    <a class="theme-card" href="#agua">
+      <h3>02 · Monitorização da água</h3>
+      <p>Observação dos recursos hídricos e dos rios.</p>
+      <span>Explorar tema →</span>
+    </a>
 
-    <section class="intro section" id="sobre">
-      <div class="section-kicker">01 / SOBRE O ENCONTRO</div>
-      <div class="intro-layout">
-        <h2>A ciência aproxima-nos, inspira-nos e abre caminhos para transformar realidades.</h2>
-        <div class="intro-copy">
-          <p>No dia 21 de Novembro, o EYES TO EARTH (ETE) realizou o seu Workshop de Estudantes 2, reunindo 12 participantes de diferentes níveis académicos e percursos de formação.</p>
-          <p>O encontro promoveu a partilha de conhecimentos sobre aplicações dos dados de satélite e da Inteligência Artificial na monitorização dos recursos hídricos e na previsão de cheias, incluindo a demonstração da plataforma ETE.</p>
-          <p>Mais do que uma formação, foi um espaço de intercâmbio científico e aproximação entre diferentes áreas do conhecimento, reforçando a importância da tecnologia na resposta aos desafios ambientais de Moçambique.</p>
-        </div>
-      </div>
-      <div class="stats">
-        <div><strong>12</strong><span>participantes</span></div>
-        <div><strong>02</strong><span>workshop de estudantes</span></div>
-        <div><strong>IA + EO</strong><span>tecnologias em foco</span></div>
-        <div><strong>ÁGUA</strong><span>recurso em destaque</span></div>
-      </div>
-    </section>
+    <a class="theme-card" href="#ia">
+      <h3>03 · Inteligência Artificial</h3>
+      <p>Aplicações de IA na análise de dados ambientais.</p>
+      <span>Explorar tema →</span>
+    </a>
 
-    <section class="platform-section section" id="programa">
-      <div class="platform-card">
-        <div class="platform-copy">
-          <div class="section-kicker light-kicker">02 / DEMONSTRAÇÃO DA PLATAFORMA</div>
-          <h2>Da observação da Terra à informação para agir.</h2>
-          <p>Durante o workshop, os participantes conheceram a plataforma ETE. Visite o painel de controlo e explore a ferramenta apresentada no encontro.</p>
-          <a class="button button-light" href="https://ete-platform.streamlit.app/" target="_blank" rel="noopener">Abrir painel de controlo ETE ↗</a>
-          <small class="external-note">A plataforma abre numa nova janela.</small>
-        </div>
-        <div class="dashboard-art" aria-hidden="true">
-          <div class="dash-top"><span></span><span></span><span></span><b>ETE / DASHBOARD</b></div>
-          <div class="dash-map"><div class="map-river"></div><i class="pin pin-one"></i><i class="pin pin-two"></i><i class="pin pin-three"></i></div>
-          <div class="dash-bottom"><div><small>MONITORIZAÇÃO</small><b>Recursos hídricos</b></div><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-        </div>
-      </div>
-    </section>
+    <a class="theme-card" href="#cheias">
+      <h3>04 · Previsão de cheias</h3>
+      <p>Tecnologias de apoio à monitorização e previsão.</p>
+      <span>Explorar tema →</span>
+    </a>
+  </div>
+</section>
 
+<section class="section topic-details" id="observacao">
+  <h2>Observação da Terra</h2>
+  <p>
+    A Observação da Terra utiliza tecnologias de satélite para recolher
+    informações sobre a superfície terrestre, a vegetação, os rios
+    e as alterações ambientais.
+  </p>
+</section>
 
-    <section class="section themes" id="temas">
-      <div class="section-kicker">03 / EXPLORAR OS TEMAS</div>
-      <div class="section-heading">
-        <div><h2>Conhecimento em foco</h2><p>Explore os temas científicos abordados no workshop.</p></div>
-        <span class="section-number">OBSERVAÇÃO · ÁGUA · IA</span>
-      </div>
-      <div class="theme-grid">
-        <a class="theme-card" href="#tema-observacao"><span>01</span><b>Observação da Terra</b><small>Como os satélites ajudam a observar a superfície terrestre.</small><i>Explorar tema ↘</i></a>
-        <a class="theme-card" href="#tema-agua"><span>02</span><b>Monitorização da água</b><small>Dados e indicadores para acompanhar os recursos hídricos.</small><i>Explorar tema ↘</i></a>
-        <a class="theme-card" href="#tema-ia"><span>03</span><b>Inteligência Artificial</b><small>Possíveis aplicações da IA na análise de dados ambientais.</small><i>Explorar tema ↘</i></a>
-        <a class="theme-card" href="#tema-cheias"><span>04</span><b>Previsão de cheias</b><small>Informação geoespacial para compreender riscos de inundação.</small><i>Explorar tema ↘</i></a>
-      </div>
-      <div class="theme-details">
-        <article id="tema-observacao"><span class="detail-number">TEMA 01</span><h3>Observação da Terra</h3><p>A Observação da Terra utiliza satélites e outros sensores para recolher informação sobre a superfície terrestre, a atmosfera e os corpos de água. As imagens de satélite permitem acompanhar mudanças na paisagem, extensão de água, uso e cobertura do solo e outros indicadores ambientais ao longo do tempo.</p></article>
-        <article id="tema-agua"><span class="detail-number">TEMA 02</span><h3>Monitorização dos recursos hídricos</h3><p>A monitorização da água combina observações no terreno, dados hidrológicos e informação obtida por satélite. Estes dados podem apoiar a análise da extensão de massas de água, alterações sazonais e condições da bacia hidrográfica. A interpretação deve considerar a resolução, a data e as limitações de cada fonte.</p></article>
-        <article id="tema-ia"><span class="detail-number">TEMA 03</span><h3>Inteligência Artificial aplicada ao ambiente</h3><p>Os métodos de Inteligência Artificial podem ajudar a identificar padrões em grandes conjuntos de dados, classificar imagens e apoiar modelos de previsão. Os resultados dependem da qualidade dos dados de treino, da validação e do contexto local; não substituem a verificação científica nem os avisos das autoridades competentes.</p></article>
-        <article id="tema-cheias"><span class="detail-number">TEMA 04</span><h3>Cheias e risco de inundação</h3><p>A combinação de imagens de satélite, precipitação, níveis de água, relevo e informação local pode contribuir para mapear áreas inundadas e apoiar a avaliação do risco. A previsão operacional exige dados atualizados, modelos validados e articulação com os serviços responsáveis pela gestão de riscos.</p></article>
-      </div>
-    </section>
+<section class="section topic-details" id="agua">
+  <h2>Monitorização dos recursos hídricos</h2>
+  <p>
+    A observação por satélite pode apoiar o acompanhamento dos rios,
+    das áreas inundáveis e das alterações na disponibilidade de água.
+  </p>
+</section>
 
-    <section class="marracuene-section section" id="marracuene">
-      <div class="section-kicker">04 / CONTEXTO GEOGRÁFICO E HISTÓRICO</div>
-      <div class="section-heading">
-        <div><h2>Marracuene e o rio Incomáti</h2><p>O território que ajuda a compreender a importância da monitorização da água.</p></div>
-        <span class="section-number">PROVÍNCIA DE MAPUTO</span>
-      </div>
-      <div class="place-layout">
-        <div class="place-copy">
-          <h3>Onde fica?</h3>
-          <p>Marracuene é uma vila e distrito da província de Maputo, no sul de Moçambique, situada a cerca de 30 km a norte da cidade de Maputo. A vila encontra-se na margem direita do rio Incomáti. O distrito é limitado, de forma geral, pelo distrito da Manhiça a norte, pela cidade de Maputo a sul, pelo oceano Índico a este e por áreas dos distritos de Moamba e Matola a oeste.</p>
-          <h3>O rio e a paisagem</h3>
-          <p>O Incomáti é um rio internacional que atravessa a região e desagua no oceano Índico na zona do delta de Macaneta. A planície aluvionar e as áreas próximas do rio são importantes para atividades agrícolas e para os ecossistemas locais. A proximidade do rio também torna relevante acompanhar a dinâmica das cheias e das inundações.</p>
-          <h3>Uma breve nota histórica</h3>
-          <p>Marracuene é conhecida pela Batalha de Marracuene, ocorrida a 2 de Fevereiro de 1895, episódio associado à resistência local à ocupação colonial portuguesa. Durante o período colonial, a vila foi também conhecida como Vila Luísa. A história local deve ser contada valorizando as fontes históricas e as memórias das comunidades.</p>
-          <div class="source-links"><a href="https://www.cmmarracuene.gov.mz/sobre-o-municipio/" target="_blank" rel="noopener">Município de Marracuene — sobre o município ↗</a><a href="https://ine.gov.mz/documents/20119/271103/Marracuene_Junho2024.pdf" target="_blank" rel="noopener">INE — Estatísticas do Distrito de Marracuene ↗</a><a href="https://www.portaldogoverno.gov.mz/por/content/download/2966/23882/version/1/file/Marracuene.pdf" target="_blank" rel="noopener">Portal do Governo — Perfil do distrito ↗</a></div>
-        </div>
-        <aside class="place-fact">
-          <div class="map-symbol">⌖</div><b>Localização de referência</b><p>Marracuene, Província de Maputo, Moçambique</p>
-          <a class="button button-light" href="https://www.openstreetmap.org/search?query=Marracuene%2C%20Mozambique" target="_blank" rel="noopener">Ver mapa de Marracuene ↗</a>
-          <small>O mapa abre num serviço externo. Para assinalar o ponto exato de estudo, será necessário confirmar a localização de campo.</small>
-        </aside>
-      </div>
-    </section>
+<section class="section topic-details" id="ia">
+  <h2>Inteligência Artificial</h2>
+  <p>
+    A Inteligência Artificial permite analisar grandes conjuntos de dados
+    e identificar padrões que podem apoiar estudos e decisões ambientais.
+  </p>
+</section>
 
-    <section class="section presentations" id="apresentacoes">
-      <div class="section-kicker">03 / PARTILHA DE CONHECIMENTO</div>
-      <div class="section-heading">
-        <div><h2>Apresentações</h2><p>Materiais partilhados pelos quatro apresentadores do workshop.</p></div>
-        <span class="section-number">04 CONTRIBUTOS</span>
-      </div>
-      <div class="presentation-grid">
-        <article class="presentation-card"><span class="card-index">01</span><div class="file-icon">PDF</div><h3>Apresentação 1</h3><p>Nome do apresentador e tema a inserir.</p><span class="file-status">PDF a disponibilizar</span></article>
-        <article class="presentation-card"><span class="card-index">02</span><div class="file-icon">PDF</div><h3>Apresentação 2</h3><p>Nome do apresentador e tema a inserir.</p><span class="file-status">PDF a disponibilizar</span></article>
-        <article class="presentation-card"><span class="card-index">03</span><div class="file-icon">PDF</div><h3>Apresentação 3</h3><p>Nome do apresentador e tema a inserir.</p><span class="file-status">PDF a disponibilizar</span></article>
-        <article class="presentation-card"><span class="card-index">04</span><div class="file-icon">PDF</div><h3>Apresentação 4</h3><p>Nome do apresentador e tema a inserir.</p><span class="file-status">PDF a disponibilizar</span></article>
-      </div>
-      <p class="editor-note">Os títulos, nomes e ficheiros PDF serão adicionados quando os materiais forem disponibilizados.</p>
-    </section>
+<section class="section topic-details" id="cheias">
+  <h2>Previsão de cheias</h2>
+  <p>
+    A combinação de dados de satélite, informação ambiental e modelos
+    de análise pode contribuir para compreender e acompanhar fenómenos
+    de inundação.
+  </p>
+</section>
 
-    <section class="gallery-section section" id="galeria">
-      <div class="section-kicker">06 / MOMENTOS DO WORKSHOP</div>
-      <div class="section-heading">
-        <div><h2>Galeria</h2><p>Registos do intercâmbio, das atividades práticas e dos participantes.</p></div>
-        <span class="section-number">FOTOGRAFIAS</span>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-placeholder gallery-large"><span>01</span><b>Fotografia de grupo</b><small>Adicionar imagem em assets/fotos</small></div>
-        <div class="gallery-placeholder"><span>02</span><b>Sessão de apresentações</b><small>Adicionar imagem em assets/fotos</small></div>
-        <div class="gallery-placeholder"><span>03</span><b>Aula prática</b><small>Adicionar imagem em assets/fotos</small></div>
-        <div class="gallery-placeholder"><span>04</span><b>Demonstração da plataforma</b><small>Adicionar imagem em assets/fotos</small></div>
-        <div class="gallery-placeholder"><span>05</span><b>Intercâmbio científico</b><small>Adicionar imagem em assets/fotos</small></div>
-      </div>
-      <p class="editor-note">As fotografias serão inseridas nesta galeria. Confirme que existe autorização para publicar imagens dos participantes.</p>
-    </section>
+<section class="section geography" id="marracuene">
+  <p class="eyebrow">CONTEXTO GEOGRÁFICO E AMBIENTAL</p>
+  <h2>Marracuene e o rio Incomáti</h2>
 
-    <section class="closing">
-      <div class="closing-mark">ETE</div>
-      <p class="eyebrow">EYES TO EARTH · MOÇAMBIQUE</p>
-      <h2>Conhecimento que observa. Tecnologia que transforma.</h2>
-      <p>Um espaço de aprendizagem e colaboração em torno dos desafios ambientais.</p>
-      <a class="button button-light" href="https://ete-platform.streamlit.app/" target="_blank" rel="noopener">Visitar o painel ETE ↗</a>
-    </section>
-  </main>
+  <img class="geography-image"
+       src="assets/imagens/temas/01-rio-incomati-satelite.png"
+       alt="Representação ilustrativa do rio Incomáti em vista aérea">
 
-  <footer class="footer">
-    <a class="brand footer-brand" href="#inicio"><span class="brand-mark">ETE</span><span><strong>EYES TO EARTH</strong><small>Workshop de Estudantes 2 · 2026</small></span></a>
-    <div class="footer-links"><a href="https://sadi2026.github.io/eyes-to-earth-icymi/" target="_blank" rel="noopener">Workshop 1 ↗</a><a href="https://ete-platform.streamlit.app/" target="_blank" rel="noopener">Plataforma ETE ↗</a><a href="https://github.com/SADI2026/eyes-to-earth-workshop-2" target="_blank" rel="noopener">GitHub ↗</a></div>
-    <p>© 2026 EYES TO EARTH. Todos os direitos reservados.</p>
-  </footer>
-  <script src="script.js"></script>
+  <p>
+    Marracuene é uma vila e sede distrital da Província de Maputo,
+    situada a norte da cidade de Maputo, na margem direita do rio
+    Incomáti.
+  </p>
+
+  <h3>Um território com história</h3>
+  <p>
+    Marracuene ocupa um lugar importante na história de Moçambique.
+    A região foi palco da Batalha de Marracuene, a 2 de Fevereiro
+    de 1895, acontecimento associado à resistência à ocupação colonial
+    portuguesa. A localidade também ficou historicamente conhecida
+    como Vila Luísa durante o período colonial.
+  </p>
+
+  <h3>O rio Incomáti e a Observação da Terra</h3>
+  <p>
+    O rio Incomáti constitui um elemento importante da paisagem
+    e da dinâmica ambiental da região. Através da Observação da Terra,
+    é possível estudar a paisagem, acompanhar alterações na cobertura
+    do solo e analisar áreas potencialmente afectadas por inundações.
+  </p>
+
+  <img class="geography-image"
+       src="assets/imagens/temas/02-rio-incomati-vista-terrestre.jpg"
+       alt="Fotografia terrestre do rio Incomáti">
+
+  <p class="image-note">
+    As imagens ilustrativas geradas por IA não representam medições
+    geoespaciais nem imagens reais de satélite.
+  </p>
+</section>
+
+<section class="section platform-section">
+  <p class="eyebrow">TECNOLOGIA E INOVAÇÃO</p>
+  <h2>Plataforma EYES TO EARTH</h2>
+  <p>
+    Conheça a plataforma do projecto e explore as suas funcionalidades.
+  </p>
+  <a class="main-button"
+     href="https://ete-platform.streamlit.app"
+     target="_blank" rel="noopener">
+     Aceder à plataforma ETE →
+  </a>
+</section>
+
+<section class="section" id="galeria">
+  <p class="eyebrow">MOMENTOS DO EVENTO</p>
+  <h2>Galeria do Workshop</h2>
+  <p>
+    Registos dos participantes, das apresentações, das actividades
+    práticas e dos momentos de reconhecimento.
+  </p>
+
+  <div class="gallery-grid">
+    <img src="assets/imagens/galeria/01-estudantes-sala-01.jpg" alt="Estudantes na sala">
+    <img src="assets/imagens/galeria/02-estudantes-sala-02.jpg" alt="Participantes durante o workshop">
+    <img src="assets/imagens/galeria/03-estudantes-sala-03.jpg" alt="Estudantes nas actividades">
+    <img src="assets/imagens/galeria/04-estudantes-sala-04.jpg" alt="Estudante a participar">
+    <img src="assets/imagens/galeria/05-estudantes-sala-05.jpg" alt="Participante no laboratório">
+    <img src="assets/imagens/galeria/06-estudantes-sala-06.jpg" alt="Estudante durante a sessão">
+    <img src="assets/imagens/galeria/07-aula-pratica.jpg" alt="Aula prática">
+    <img src="assets/imagens/galeria/01-apresentacao-01.jpg" alt="Apresentação científica">
+    <img src="assets/imagens/galeria/02-apresentacao-02.jpg" alt="Apresentação de participante">
+    <img src="assets/imagens/galeria/01-equipa-e-candidatos-01.jpg" alt="Equipa e candidatos">
+    <img src="assets/imagens/galeria/02-equipa-e-candidatos-02.jpg" alt="Fotografia da equipa">
+    <img src="assets/imagens/galeria/03-equipa-e-candidatos-03.jpg" alt="Participantes e equipa">
+    <img src="assets/imagens/galeria/04-candidato-observacao-telescopio.jpg" alt="Candidato junto ao telescópio">
+    <img src="assets/imagens/galeria/01-entrega-certificado-01.jpg" alt="Entrega de certificado">
+    <img src="assets/imagens/galeria/02-entrega-certificado-02.jpg" alt="Momento de entrega de certificado">
+    <img src="assets/imagens/galeria/03-entrega-certificado-03.jpg" alt="Entrega de certificado a participante">
+    <img src="assets/imagens/galeria/04-grupo-com-certificados.jpg" alt="Grupo com certificados">
+  </div>
+</section>
+
+<section class="section" id="apresentacoes">
+  <p class="eyebrow">MATERIAIS CIENTÍFICOS</p>
+  <h2>Apresentações do Workshop</h2>
+  <p>
+    Consulte e descarregue os materiais apresentados pelos colegas.
+  </p>
+
+  <div class="presentation-list">
+    <a href="documentos/apresentacoes/apresentacao-01.pdf" target="_blank">
+      Apresentação 1 — Consultar PDF
+    </a>
+    <a href="documentos/apresentacoes/apresentacao-02.pdf" target="_blank">
+      Apresentação 2 — Consultar PDF
+    </a>
+    <a href="documentos/apresentacoes/apresentacao-03.pdf" target="_blank">
+      Apresentação 3 — Consultar PDF
+    </a>
+    <a href="documentos/apresentacoes/apresentacao-04.pdf" target="_blank">
+      Apresentação 4 — Consultar PDF
+    </a>
+  </div>
+</section>
+
+<section class="closing">
+  <h2>A ciência aproxima-nos, inspira-nos e abre caminhos para transformar realidades.</h2>
+  <p>EYES TO EARTH · 2.º Workshop de Estudantes · 2026</p>
+</section>
+
+</main>
+
+<footer>
+  <p>EYES TO EARTH — Moçambique</p>
+  <p>Universidade Eduardo Mondlane · Faculdade de Ciências</p>
+  <a href="https://ete-platform.streamlit.app" target="_blank" rel="noopener">Plataforma ETE</a>
+</footer>
+
 </body>
 </html>
