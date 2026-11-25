@@ -1,20 +1,27 @@
 
-/* ========================================
-   EYES TO EARTH — WORKSHOP 2
-   Estilo visual do website
-======================================== */
+/* =====================================================
+   EYES TO EARTH — STUDENT WORKSHOP 2
+   Folha de estilos principal
+   ===================================================== */
+
+/* 1. CORES E CONFIGURAÇÕES GERAIS */
 
 :root {
   --verde: #176b50;
   --verde-escuro: #104b3b;
   --verde-claro: #e8f3ed;
+
   --azul: #12344a;
   --azul-claro: #eaf2f7;
+
   --turquesa: #25a99a;
+
   --branco: #ffffff;
   --fundo: #f7f9f8;
+
   --texto: #26363d;
   --cinzento: #66757a;
+
   --sombra: 0 8px 28px rgba(18, 52, 74, 0.09);
   --raio: 14px;
 }
@@ -27,7 +34,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 85px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -35,6 +42,7 @@ body {
   background: var(--fundo);
   color: var(--texto);
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 img {
@@ -45,26 +53,30 @@ img {
 a {
   color: var(--verde);
   text-decoration: none;
+  transition: 0.3s ease;
 }
 
 a:hover {
   color: var(--turquesa);
 }
 
-/* Navegação */
+
+/* 2. CABEÇALHO E NAVEGAÇÃO */
 
 header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.97);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
 }
 
 nav {
-  max-width: 1180px;
+  max-width: 1200px;
   margin: auto;
-  padding: 15px 24px;
+  padding: 16px 24px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,93 +85,118 @@ nav {
 }
 
 nav a {
-  font-size: 0.92rem;
+  color: var(--azul);
+  font-size: 0.91rem;
   font-weight: 600;
+}
+
+nav a:first-child {
+  color: var(--verde);
+  font-size: 1.1rem;
 }
 
 nav a:hover {
   color: var(--turquesa);
 }
 
-/* Estrutura geral */
+
+/* 3. ESTRUTURA DAS SECÇÕES */
 
 main {
-  overflow: hidden;
+  width: 100%;
 }
 
 section {
   padding: 75px 24px;
-}
-
-section > * {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+  scroll-margin-top: 85px;
 }
 
 section h2 {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+
   color: var(--azul);
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
   line-height: 1.25;
-  margin-bottom: 22px;
 }
 
 section h3 {
   color: var(--verde-escuro);
   margin-bottom: 12px;
+  font-size: 1.2rem;
 }
 
 section p {
-  margin-bottom: 16px;
+  max-width: 1100px;
+  margin: 0 auto 17px;
+  font-size: 1rem;
 }
 
 section:nth-of-type(even) {
   background: var(--branco);
 }
 
-/* Capa principal */
+
+/* 4. CAPA PRINCIPAL */
 
 .hero {
-  min-height: 570px;
+  min-height: 580px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: var(--branco);
+
   padding: 90px 24px;
+  text-align: center;
+
+  color: var(--branco);
+
   background:
-    linear-gradient(rgba(9, 35, 43, 0.72), rgba(9, 35, 43, 0.76)),
+    linear-gradient(
+      rgba(9, 35, 43, 0.72),
+      rgba(9, 35, 43, 0.76)
+    ),
     url("assets/imagens/capa/01-capa-satelite-incomati.png")
-    center/cover no-repeat;
+    center / cover no-repeat;
 }
 
-.hero h1 {
-  max-width: 950px;
-  margin: 0 auto 22px;
-  font-size: clamp(2rem, 5vw, 3.6rem);
-  line-height: 1.15;
-  color: var(--branco);
+.hero div {
+  max-width: 1000px;
 }
 
 .hero p {
-  max-width: 760px;
-  margin: 0 auto 25px;
+  color: var(--branco);
   font-size: 1.15rem;
+  margin-bottom: 22px;
 }
 
-/* Botões */
+.hero h1 {
+  color: var(--branco);
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+
+/* 5. BOTÕES */
 
 .btn,
 button {
   display: inline-block;
-  padding: 12px 23px;
+
+  padding: 12px 24px;
   border-radius: 30px;
+
   background: var(--verde);
   color: var(--branco);
-  font-weight: 700;
+
   border: 2px solid var(--verde);
-  transition: 0.25s ease;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .btn:hover,
@@ -175,24 +212,40 @@ button:hover {
   border-color: var(--turquesa);
 }
 
-/* Cartões e conteúdos */
+.hero .btn:hover {
+  background: var(--verde);
+  border-color: var(--verde);
+}
+
+
+/* 6. CARTÕES */
 
 .cards,
-.themes-grid,
-.gallery-grid {
+.themes-grid {
+  max-width: 1100px;
+  margin: 30px auto 0;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 24px;
-  margin-top: 30px;
 }
 
 .card,
 .theme-card {
-  background: var(--branco);
   padding: 25px;
+
+  background: var(--branco);
   border-radius: var(--raio);
+
   box-shadow: var(--sombra);
   border-top: 4px solid var(--turquesa);
+
+  transition: transform 0.3s ease;
+}
+
+.card:hover,
+.theme-card:hover {
+  transform: translateY(-5px);
 }
 
 .card p,
@@ -200,144 +253,314 @@ button:hover {
   color: var(--cinzento);
 }
 
-/* Imagens temáticas */
 
-section img {
-  border-radius: var(--raio);
-}
+/* 7. IMAGENS TEMÁTICAS */
 
 .theme-card img {
   width: 100%;
   height: 210px;
   object-fit: cover;
+  border-radius: 10px;
   margin-bottom: 16px;
 }
 
-/* Galeria */
+section img {
+  border-radius: var(--raio);
+}
+
+section#temas img,
+section#marracuene img {
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
+  margin: 25px auto;
+}
+
+
+/* 8. GALERIA DE FOTOGRAFIAS */
+
+.gallery-grid {
+  max-width: 1100px;
+  margin: 30px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
 .gallery-grid img {
   width: 100%;
-  height: 240px;
+  height: 245px;
+
   object-fit: cover;
   border-radius: var(--raio);
-  cursor: pointer;
+
   box-shadow: var(--sombra);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .gallery-grid img:hover {
   transform: scale(1.025);
+  box-shadow: 0 12px 30px rgba(18, 52, 74, 0.18);
 }
 
 .gallery-grid img.image-error {
   opacity: 0.35;
 }
 
-/* Janela de ampliação das fotografias */
+
+/* 9. JANELA DE AMPLIAÇÃO DAS FOTOGRAFIAS */
 
 .lightbox {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+
+  z-index: 9999;
+
+  width: 100%;
+  height: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 30px;
-  background: rgba(0, 0, 0, 0.92);
+
+  background: rgba(0, 0, 0, 0.88);
 }
 
 .lightbox img {
-  max-width: 92%;
+  display: block;
+
+  max-width: 90%;
   max-height: 85vh;
+
+  width: auto;
+  height: auto;
+
   object-fit: contain;
+
   border-radius: 8px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.35);
 }
+
+/* Botão X para fechar */
 
 .lightbox button {
-  position: absolute;
+  position: fixed;
+
   top: 20px;
   right: 25px;
-  font-size: 1.5rem;
-  background: transparent;
-  border: 0;
-  color: white;
+
+  z-index: 10000;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--branco);
+  color: var(--azul);
+
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
 }
 
-/* Ligações para documentos */
+.lightbox button:hover {
+  background: var(--turquesa);
+  color: var(--branco);
+  transform: none;
+}
+
+
+/* 10. DOCUMENTOS E APRESENTAÇÕES */
 
 .document-list {
+  max-width: 1100px;
+  margin: 25px auto;
+
   display: grid;
   gap: 14px;
-  margin-top: 25px;
 }
 
 .document-list a {
   display: block;
-  padding: 16px 20px;
+
+  padding: 17px 22px;
+
   background: var(--azul-claro);
+  color: var(--azul);
+
   border-radius: 10px;
+
   font-weight: 600;
+
+  transition: 0.3s ease;
 }
 
 .document-list a:hover {
   background: var(--verde-claro);
+  color: var(--verde-escuro);
+  transform: translateX(5px);
 }
 
-/* Rodapé */
+
+/* 11. MENSAGEM FINAL */
+
+#mensagem-final {
+  text-align: center;
+  background: var(--verde-claro);
+}
+
+#mensagem-final h2 {
+  color: var(--verde-escuro);
+}
+
+#mensagem-final p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+/* 12. RODAPÉ */
 
 footer {
+  padding: 42px 24px;
+
   background: var(--azul);
   color: var(--branco);
+
   text-align: center;
-  padding: 38px 24px;
 }
 
 footer p {
   margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+footer strong {
+  font-size: 1.15rem;
 }
 
 footer a {
   color: #8de0ce;
 }
 
-/* Responsividade */
 
-@media (max-width: 768px) {
+/* 13. ACESSIBILIDADE */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--turquesa);
+  outline-offset: 4px;
+}
+
+
+/* 14. TABLETS E ECRÃS MÉDIOS */
+
+@media (max-width: 900px) {
+
   nav {
     justify-content: center;
-    padding: 12px 16px;
   }
 
-  nav a {
-    font-size: 0.85rem;
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   section {
-    padding: 52px 18px;
+    padding: 60px 20px;
+  }
+
+}
+
+
+/* 15. TELEMÓVEIS */
+
+@media (max-width: 600px) {
+
+  nav {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  nav a {
+    font-size: 0.82rem;
+  }
+
+  section {
+    padding: 48px 17px;
   }
 
   .hero {
-    min-height: 480px;
-    padding: 65px 20px;
+    min-height: 470px;
+    padding: 60px 18px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
   }
 
   .hero p {
     font-size: 1rem;
   }
 
-  .gallery-grid img {
-    height: 210px;
-  }
-}
-
-@media (max-width: 480px) {
   .cards,
   .themes-grid,
   .gallery-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .gallery-grid img {
+    height: 230px;
   }
+
+  .lightbox {
+    padding: 15px;
+  }
+
+  .lightbox img {
+    max-width: 96%;
+    max-height: 78vh;
+  }
+
+  .lightbox button {
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+  }
+
+}
+
+
+/* 16. REDUZIR ANIMAÇÕES QUANDO PREFERIDO */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+
 }
