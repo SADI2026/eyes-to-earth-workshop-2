@@ -1,850 +1,743 @@
 
 /* =========================================
-   CONFIGURAÇÕES GERAIS
+   EYES TO EARTH — STUDENT WORKSHOP 2
+   FOLHA DE ESTILOS PRINCIPAL
 ========================================= */
 
+/* 1. CONFIGURAÇÕES GERAIS */
+
+:root {
+    --primary: #073b4c;
+    --secondary: #087e8b;
+    --accent: #20a4a8;
+    --light: #f3f8fa;
+    --white: #ffffff;
+    --dark: #18343b;
+    --text: #465b63;
+    --border: #dce8eb;
+    --shadow: 0 8px 28px rgba(7, 59, 76, 0.08);
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #24332e;
-  background: #ffffff;
-  line-height: 1.7;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 15px;
+    overflow-x: hidden;
 }
 
 img {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 a {
-  transition: color 0.3s ease, background 0.3s ease;
+    color: inherit;
+    text-decoration: none;
 }
 
-:root {
-  --green-dark: #104b3b;
-  --green-main: #176b50;
-  --green-light: #eaf4ef;
-  --green-soft: #75b9a2;
-  --text-dark: #24332e;
-  --text-muted: #63736c;
-  --white: #ffffff;
+.container {
+    width: min(1160px, 90%);
+    margin: 0 auto;
 }
 
 
-/* =========================================
-   CABEÇALHO E NAVEGAÇÃO
-========================================= */
+/* 2. CABEÇALHO */
 
 .site-header {
-  width: 100%;
-  min-height: 88px;
-  padding: 12px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  background: #ffffff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(7, 59, 76, 0.04);
+}
+
+.header-content {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
 }
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: var(--green-dark);
-  flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
 }
 
 .site-logo {
-  width: 65px;
-  height: 65px;
-  object-fit: contain;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
 
 .brand-name {
-  font-size: 19px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--primary);
 }
 
 .main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 8px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .main-nav a {
-  color: var(--green-dark);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  padding: 7px 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary);
+    transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-  color: #15936e;
+    color: var(--accent);
 }
 
 
-/* =========================================
-   DESTAQUE PRINCIPAL
-========================================= */
+/* 3. SECÇÃO PRINCIPAL */
 
 .hero {
-  min-height: 570px;
-  display: flex;
-  align-items: center;
-  padding: 85px 8%;
-  color: #ffffff;
-  background:
-    linear-gradient(
-      110deg,
-      rgba(5, 39, 31, 0.94),
-      rgba(16, 75, 59, 0.88),
-      rgba(20, 91, 76, 0.72)
-    );
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(4, 43, 58, 0.97),
+            rgba(7, 89, 103, 0.91)
+        );
+    color: var(--white);
+    padding: 90px 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    right: -100px;
+    bottom: -180px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 45px rgba(255, 255, 255, 0.025),
+        0 0 0 90px rgba(255, 255, 255, 0.02);
+    pointer-events: none;
 }
 
 .hero-content {
-  max-width: 950px;
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
 }
 
-.eyebrow,
-.section-kicker {
-  color: #75c7a9;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
+.eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.hero .eyebrow {
+    color: #9ce7e3;
 }
 
 .hero h1 {
-  max-width: 900px;
-  font-size: clamp(30px, 5vw, 53px);
-  line-height: 1.16;
-  margin-bottom: 25px;
-  font-weight: 800;
+    max-width: 900px;
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 25px;
 }
 
 .hero-description {
-  max-width: 680px;
-  font-size: 18px;
-  color: #e2eee8;
-  margin-bottom: 28px;
+    max-width: 760px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 16px;
+    margin-bottom: 28px;
 }
 
-.hero-details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 35px;
+.event-details {
+    margin-bottom: 30px;
 }
 
-.hero-details span {
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.08);
-  padding: 9px 15px;
-  border-radius: 30px;
-  font-size: 13px;
+.event-details p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 7px;
+    font-size: 13px;
 }
 
-.primary-button {
-  display: inline-block;
-  background: #ffffff;
-  color: var(--green-dark);
-  text-decoration: none;
-  padding: 13px 25px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 700;
+.event-details strong {
+    color: #ffffff;
 }
 
-.primary-button:hover {
-  background: #d9f1e6;
-  color: var(--green-dark);
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 24px;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--white);
+    color: var(--primary);
+    transform: translateY(-2px);
 }
 
 
-/* =========================================
-   SECÇÕES GERAIS
-========================================= */
+/* 4. SECÇÕES GERAIS */
 
 .section {
-  padding: 85px 8%;
+    padding: 90px 0;
 }
 
 .section-light {
-  background: #f4f8f6;
+    background: var(--light);
 }
 
 .section-heading {
-  max-width: 800px;
-  margin: 0 auto 45px;
-  text-align: center;
-}
-
-.section-heading .section-kicker {
-  color: var(--green-main);
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
 }
 
 .section-heading h2 {
-  color: var(--green-dark);
-  font-size: clamp(27px, 4vw, 38px);
-  line-height: 1.2;
-  margin-bottom: 15px;
+    font-size: clamp(26px, 4vw, 36px);
+    line-height: 1.25;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 15px;
 }
 
-.section-heading > p:not(.section-kicker) {
-  color: var(--text-muted);
-  font-size: 16px;
-}
-
-
-/* =========================================
-   SOBRE O WORKSHOP
-========================================= */
-
-.about-layout {
-  display: grid;
-  grid-template-columns: 1.5fr 0.8fr;
-  gap: 50px;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.about-text p {
-  color: #53635c;
-  margin-bottom: 18px;
-  font-size: 16px;
-}
-
-.event-facts {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-}
-
-.fact {
-  background: var(--green-light);
-  border-left: 5px solid var(--green-main);
-  padding: 20px 25px;
-  border-radius: 5px;
-}
-
-.fact-number {
-  display: block;
-  color: var(--green-dark);
-  font-size: 27px;
-  font-weight: 800;
-}
-
-.fact-label {
-  color: var(--text-muted);
-  font-size: 14px;
+.section-heading > p:not(.eyebrow) {
+    font-size: 14px;
+    color: var(--text);
 }
 
 
-/* =========================================
-   LOCAL DO WORKSHOP
-========================================= */
+/* 5. SOBRE O WORKSHOP */
 
-.venue-section {
-  padding: 75px 8%;
-  background: #eaf4ef;
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.venue-content {
-  max-width: 850px;
-  margin: 0 auto;
-  text-align: center;
+.about-content p,
+.context-content p,
+.platform-content p,
+.location-content p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 18px;
 }
 
-.venue-content .section-kicker {
-  color: var(--green-main);
-}
-
-.venue-content h2 {
-  color: var(--green-dark);
-  font-size: clamp(27px, 4vw, 36px);
-  margin-bottom: 20px;
-}
-
-.venue-content p {
-  color: #53635c;
-  margin-bottom: 15px;
+.about-content strong {
+    color: var(--primary);
 }
 
 
-/* =========================================
-   TEMAS ABORDADOS
-========================================= */
+/* 6. LOCALIZAÇÃO */
 
-.topics-grid {
-  max-width: 1250px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+.location-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 35px;
+    background: var(--white);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
 }
 
-.topic-card {
-  background: #ffffff;
-  padding: 28px;
-  border-radius: 8px;
-  border: 1px solid #e3ece7;
-  box-shadow: 0 5px 20px rgba(15, 65, 48, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.location-content h3 {
+    color: var(--primary);
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
-.topic-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(15, 65, 48, 0.1);
-}
-
-.topic-number {
-  color: #ffffff;
-  background: var(--green-main);
-  width: 43px;
-  height: 43px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  margin-bottom: 18px;
-}
-
-.topic-card h3 {
-  color: var(--green-dark);
-  font-size: 19px;
-  margin-bottom: 12px;
-}
-
-.topic-card p {
-  color: var(--text-muted);
-  font-size: 14px;
+.location-content p {
+    margin-bottom: 8px;
 }
 
 
-/* =========================================
-   MARRACUENE E RIO INCOMÁTI
-========================================= */
+/* 7. TEMAS */
 
-.context-layout {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.6fr 0.8fr;
-  gap: 45px;
-  align-items: start;
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
 }
 
-.context-text h3 {
-  color: var(--green-dark);
-  font-size: 21px;
-  margin: 10px 0 15px;
+.theme-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.context-text p {
-  color: #53635c;
-  margin-bottom: 18px;
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 35px rgba(7, 59, 76, 0.12);
 }
 
-.context-note {
-  background: #f0f6f2;
-  border-left: 4px solid var(--green-main);
-  padding: 15px 18px;
-  font-size: 14px;
-  border-radius: 4px;
+.theme-card h3 {
+    color: var(--primary);
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 13px;
 }
 
-.context-highlight {
-  background: var(--green-dark);
-  color: #ffffff;
-  padding: 35px;
-  border-radius: 8px;
-}
-
-.context-symbol {
-  display: block;
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.context-highlight h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.context-highlight p {
-  color: #e1eee8;
-  font-size: 15px;
+.theme-card p {
+    font-size: 13px;
+    line-height: 1.8;
 }
 
 
-/* =========================================
-   PLATAFORMA EYES TO EARTH
-========================================= */
+/* 8. CONTEXTO: MARRACUENE E INCOMÁTI */
+
+.context-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.context-content p {
+    margin-bottom: 20px;
+}
+
+
+/* 9. PLATAFORMA */
 
 .platform-section {
-  padding: 85px 8%;
-  background:
-    linear-gradient(
-      120deg,
-      #104b3b,
-      #176b50
-    );
-  color: #ffffff;
-  text-align: center;
+    background:
+        linear-gradient(
+            120deg,
+            var(--primary),
+            #096b77
+        );
+    color: var(--white);
+}
+
+.platform-section .section-heading h2 {
+    color: var(--white);
+}
+
+.platform-section .section-heading .eyebrow {
+    color: #9ce7e3;
 }
 
 .platform-content {
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.platform-content .section-kicker {
-  color: #9ad8bd;
-}
-
-.platform-content h2 {
-  font-size: clamp(28px, 4vw, 39px);
-  margin-bottom: 22px;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .platform-content p {
-  color: #e1eee8;
-  margin-bottom: 18px;
-  font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 28px;
 }
 
-.platform-content .primary-button {
-  margin-top: 15px;
+.platform-content .btn-primary {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.platform-content .btn-primary:hover {
+    background: var(--accent);
+    color: var(--white);
 }
 
 
-/* =========================================
-   GALERIA DE FOTOGRAFIAS
-========================================= */
+/* 10. GALERIA */
 
 .gallery-grid {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
 }
 
 .gallery-item {
-  background: #ffffff;
-  border-radius: 7px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #e4edef;
+    box-shadow: var(--shadow);
 }
 
 .gallery-item img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 .gallery-item:hover img {
-  transform: scale(1.04);
-}
-
-.gallery-item figcaption {
-  padding: 13px 15px;
-  color: var(--green-dark);
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.gallery-note {
-  max-width: 900px;
-  margin: 30px auto 0;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 13px;
+    transform: scale(1.06);
 }
 
 
-/* =========================================
-   APRESENTAÇÕES E DOCUMENTOS
-========================================= */
+/* 11. MATERIAIS E APRESENTAÇÕES */
 
-.documents-list {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
 }
 
 .document-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 20px 22px;
-  border: 1px solid #e0e9e4;
-  border-radius: 7px;
-  background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    box-shadow: var(--shadow);
 }
 
-.document-icon {
-  min-width: 52px;
-  height: 52px;
-  background: #fbe9e7;
-  color: #a93226;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 800;
-  border-radius: 6px;
+.document-card h3 {
+    color: var(--primary);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
-.document-info {
-  flex: 1;
+.document-card p {
+    font-size: 13px;
+    margin-bottom: 20px;
 }
 
-.document-info h3 {
-  color: var(--green-dark);
-  font-size: 17px;
-  margin-bottom: 4px;
+.document-card a {
+    display: inline-block;
+    margin-top: auto;
+    padding: 10px 18px;
+    border-radius: 4px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 800;
+    transition: background 0.3s ease;
 }
 
-.document-info p {
-  color: var(--text-muted);
-  font-size: 13px;
-}
-
-.document-card > a {
-  display: inline-block;
-  background: var(--green-main);
-  color: #ffffff;
-  text-decoration: none;
-  padding: 10px 17px;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.document-card > a:hover {
-  background: var(--green-dark);
+.document-card a:hover {
+    background: var(--accent);
 }
 
 
-/* =========================================
-   MENSAGEM FINAL
-========================================= */
+/* 12. AGRADECIMENTOS */
+
+.acknowledgements-content {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 45px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.acknowledgements-content p {
+    font-size: 13px;
+    line-height: 2;
+    color: var(--text);
+    margin-bottom: 22px;
+    text-align: justify;
+}
+
+.acknowledgements-content strong {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.acknowledgements-content .acknowledgements-highlight {
+    margin-top: 30px;
+    padding: 22px;
+    background: #eaf6f6;
+    border-left: 4px solid var(--accent);
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.acknowledgements-content .acknowledgements-final {
+    margin-bottom: 0;
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+/* 13. MENSAGEM FINAL */
 
 .closing-section {
-  padding: 65px 8%;
-  background: #eaf4ef;
-  text-align: center;
+    padding: 75px 0;
+    background: var(--primary);
+    text-align: center;
+    color: var(--white);
 }
 
-.closing-section p {
-  max-width: 850px;
-  margin: 0 auto 15px;
-  color: var(--green-dark);
-  font-size: clamp(23px, 3.5vw, 32px);
-  font-weight: 700;
-  line-height: 1.4;
+.closing-quote {
+    max-width: 850px;
+    margin: 0 auto 18px;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.5;
+    font-weight: 700;
 }
 
-.closing-section span {
-  color: var(--text-muted);
-  font-size: 14px;
-  font-weight: 600;
+.closing-brand {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #9ce7e3;
+    text-transform: uppercase;
 }
 
 
-/* =========================================
-   RODAPÉ INSTITUCIONAL — QUATRO COLUNAS
-========================================= */
+/* 14. RODAPÉ */
 
-.footer-main {
-  background: #104b3b;
-  color: #ffffff;
-  padding: 55px 6% 20px;
+.site-footer {
+    padding: 65px 0 20px;
+    background: #052e3b;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 35px;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.footer-column {
-  min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 35px;
+    padding-bottom: 45px;
 }
 
 .footer-column h3 {
-  color: #ffffff;
-  font-size: 18px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #75b9a2;
+    color: var(--white);
+    font-size: 14px;
+    margin-bottom: 22px;
+    font-weight: 800;
 }
 
 .footer-column p {
-  color: #e5f0eb;
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 13px;
-  overflow-wrap: anywhere;
+    font-size: 11px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
 }
 
 .footer-column strong {
-  color: #ffffff;
+    color: var(--white);
 }
 
 .footer-column a {
-  color: #bce8d8;
-  text-decoration: none;
-  overflow-wrap: anywhere;
+    color: #9ce7e3;
+    overflow-wrap: anywhere;
 }
 
 .footer-column a:hover {
-  color: #ffffff;
-  text-decoration: underline;
+    color: var(--white);
+    text-decoration: underline;
 }
 
-.footer-logos {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 14px;
+.footer-logo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    background: var(--white);
+    padding: 5px;
+    border-radius: 6px;
+    margin-bottom: 15px;
 }
 
-.footer-logos img {
-  width: 100%;
-  max-width: 150px;
-  height: 65px;
-  object-fit: contain;
-  background: #ffffff;
-  border-radius: 6px;
-  padding: 6px;
+.funders-logos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.funder-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    background: var(--white);
+    padding: 6px;
+    border-radius: 5px;
 }
 
 .footer-bottom {
-  max-width: 1300px;
-  margin: 40px auto 0;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    text-align: center;
 }
 
 .footer-bottom p {
-  color: #dcebe5;
-  font-size: 13px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.65);
 }
 
 
-/* =========================================
-   TABLETS
-========================================= */
+/* 15. TABLETS */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
-  .site-header {
-    flex-direction: column;
-    gap: 12px;
-    padding: 12px 4%;
-  }
+    .header-content {
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+        gap: 14px;
+    }
 
-  .main-nav {
-    justify-content: center;
-  }
+    .main-nav {
+        justify-content: center;
+        gap: 12px 18px;
+    }
 
-  .topics-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+    .themes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-  .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-  .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-}
-
-
-/* =========================================
-   TELEMÓVEIS
-========================================= */
-
-@media (max-width: 650px) {
-
-  html {
-    scroll-padding-top: 150px;
-  }
-
-  .site-header {
-    position: relative;
-  }
-
-  .brand-name {
-    font-size: 17px;
-  }
-
-  .site-logo {
-    width: 55px;
-    height: 55px;
-  }
-
-  .main-nav {
-    gap: 5px 13px;
-  }
-
-  .main-nav a {
-    font-size: 12px;
-  }
-
-  .hero {
-    min-height: 520px;
-    padding: 65px 7%;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero-description {
-    font-size: 16px;
-  }
-
-  .hero-details {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .section {
-    padding: 60px 7%;
-  }
-
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .event-facts {
-    grid-template-columns: 1fr;
-  }
-
-  .venue-section,
-  .platform-section {
-    padding: 60px 7%;
-  }
-
-  .topics-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .context-layout {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-item img {
-    height: 230px;
-  }
-
-  .document-card {
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .document-info {
-    flex-basis: calc(100% - 70px);
-  }
-
-  .document-card > a {
-    margin-left: 64px;
-  }
-
-  .closing-section {
-    padding: 50px 7%;
-  }
-
-  .footer-main {
-    padding: 40px 7% 18px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .footer-logos {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .footer-logos img {
-    max-width: 110px;
-    height: 60px;
-  }
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
 }
 
 
-/* =========================================
-   ECRÃS MUITO PEQUENOS
-========================================= */
+/* 16. TELEMÓVEIS */
 
-@media (max-width: 360px) {
+@media (max-width: 600px) {
 
-  .brand-name {
-    font-size: 14px;
-  }
+    body {
+        font-size: 14px;
+    }
 
-  .hero h1 {
-    font-size: 27px;
-  }
+    .container {
+        width: 90%;
+    }
 
-  .main-nav {
-    gap: 5px 9px;
-  }
+    .header-content {
+        padding: 12px 0;
+    }
 
-  .main-nav a {
-    font-size: 11px;
-  }
+    .site-logo {
+        width: 45px;
+        height: 45px;
+    }
 
-}
+    .brand-name {
+        font-size: 15px;
+    }
 
-  .main-nav a {
-    font-size: 11px;
-  }
+    .main-nav {
+        gap: 9px 13px;
+    }
+
+    .main-nav a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+        letter-spacing: -0.5px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .themes-grid,
+    .gallery-grid,
+    .documents-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 260px;
+    }
+
+    .location-content {
+        padding: 25px;
+    }
+
+    .theme-card,
+    .document-card {
+        padding: 23px;
+    }
+
+    .acknowledgements-content {
+        padding: 25px 20px;
+    }
+
+    .acknowledgements-content p {
+        font-size: 12px;
+        line-height: 1.9;
+        text-align: left;
+    }
+
+    .closing-section {
+        padding: 60px 0;
+    }
+
+    .site-footer {
+        padding-top: 50px;
+    }
+
+    .footer-grid {
+        gap: 30px;
+    }
 
 }
